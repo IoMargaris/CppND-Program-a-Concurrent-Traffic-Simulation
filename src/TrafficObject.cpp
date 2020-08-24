@@ -28,7 +28,7 @@ TrafficObject::TrafficObject()
 
 TrafficObject::~TrafficObject()
 {
-    // set up thread barrier before this object is destroyed
+    // L1.1 DONE - set up thread barrier before each object is destroyed
     std::for_each(threads.begin(), threads.end(), [](std::thread &t) {
         t.join();
     });
