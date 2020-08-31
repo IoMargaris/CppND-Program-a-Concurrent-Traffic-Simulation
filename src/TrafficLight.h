@@ -9,10 +9,7 @@
 // forward declarations to avoid include cycle
 class Vehicle;
 
-enum TrafficLightPhase{
-    red,
-    green
-};
+enum class TrafficLightPhase{ red, green };
 
 // FP.3 - DONE. Define a class „MessageQueue“ which has the public methods send and receive. 
 // Send should take an rvalue reference of type TrafficLightPhase whereas receive should return this type. 
@@ -44,7 +41,7 @@ class TrafficLight : TrafficObject
 public:
     // constructor / desctructor
     TrafficLight();
-    ~TrafficLight();
+    //~TrafficLight();
 
     // getters / setters
     TrafficLightPhase getCurrentPhase();

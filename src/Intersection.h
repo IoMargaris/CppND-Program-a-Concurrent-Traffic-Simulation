@@ -6,6 +6,7 @@
 #include <mutex>
 #include <memory>
 #include "TrafficObject.h"
+#include "TrafficLight.h"
 
 // forward declarations to avoid include cycle
 class Street;
@@ -28,8 +29,7 @@ private:
     std::mutex _mutex;
 };
 
-class Intersection : public TrafficObject
-{
+class Intersection : public TrafficObject {
 public:
     // constructor / desctructor
     Intersection();
